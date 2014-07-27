@@ -1,0 +1,23 @@
+{
+"name": "Tieba Extension",
+"version": "0.1.6",
+"description": "Remove Live Video from Tieba",
+"manifest_version":2,
+"permissions": ["tabs","http://tieba.baidu.com/*"],
+  "background": {
+    "page": "background.html"
+  },
+ "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+"page_action": {
+    "default_icon": "icon16.png"
+  },
+"content_scripts":[
+{
+"matches":["http://tieba.baidu.com/*"],
+"js":["myscripts.js"],
+"run_at":"document_end"
+}
+]
+}
