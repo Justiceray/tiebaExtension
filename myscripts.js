@@ -17,6 +17,9 @@ function RemoveVideo(){
    RemoveElementByClassName("clearfix BAIDU_CLB_AD BAIDU_CLB_AD_pb");
    RemoveElementByClassName("per_list j_per_list per_list_frs");
    RemoveElementByClassName("lot_wrap");	
+   RemoveElementByClassName("clearfix BAIDU_CLB_AD BAIDU_CLB_AD_frs");
+   RemoveElementByClassName("l_post_bright dasense dasense_0101 clearfix");		
+	
 }
 
 function RemoveElementByClassName(claseeName)
