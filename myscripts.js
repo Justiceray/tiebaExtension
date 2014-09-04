@@ -21,6 +21,9 @@ function RemoveVideo(){
    RemoveElementByClassName("l_post_bright dasense dasense_0101 clearfix");		
    RemoveELementById("j_ten_years");
    RemoveElementByClassName("dasense dasense_0003");
+   RemoveElementByClassName("clearfix dasense dasense_0001");
+   RemoveELementById("aside_ad");
+
 }
 
 function RemoveElementByClassName(claseeName)
