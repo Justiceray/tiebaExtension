@@ -11,7 +11,7 @@
            ".game_s",
            ".game_tab",
            ".BAIDU_CLB_AD",
-           "spreadad spreadad_0001",
+           ".spreadad",
            "#tbmall_score_region",
            ".game_rank_title",
            ".game_rank_list",
