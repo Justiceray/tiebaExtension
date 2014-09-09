@@ -29,7 +29,5 @@
         for (var i = 0; i < elementlist.length; i++) {
             elementlist[i].style.display = "none";
         }
-
-        console.log("test", selector, elementlist);
     }
 }())
