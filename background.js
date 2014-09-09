@@ -1,41 +1,35 @@
-// Called when the url of a tab changes.
-function checkForValidUrl(tabId, changeInfo, tab) {
-    // If the tabs url starts with "http://specificsite.com"...
-    if (tab.url.indexOf('http://tieba.baidu.com') == 0) {
-        // ... show the page action.
-        chrome.pageAction.show(tabId);
+(function () {
+    var selectors = [
+           ".per_list_body",
+           "#game_frs_head",
+           ".worldcup_info_banner_wrap",
+           "#j_worldcup_info_banner",
+           ".j_worldcup_info_banner_wrap",
+           ".worldcup_info_banner_show",
+           "#lecai_lottery",
+           "#game_rank",
+           ".game_s",
+           ".game_tab",
+           ".BAIDU_CLB_AD",
+           ".spreadad",
+           "#tbmall_score_region",
+           ".game_rank_title",
+           ".game_rank_list",
+           ".per_list.j_per_list.per_list_frs",
+           ".lot_wrap",
+           "#j_ten_years",
+           ".dasense",
+           "#aside_ad",
+    ];
+
+    selectors.forEach(RemoveBySelector);
+
+    function RemoveBySelector(selector) {
+        var elementlist = document.querySelectorAll(selector);
+        for (var i = 0; i < elementlist.length; i++) {
+            elementlist[i].style.display = "none";
+        }
+
+        console.log("test", selector, elementlist);
     }
-};
-
-// Listen for any changes to the URL of any tab.
-chrome.tabs.onUpdated.addListener(checkForValidUrl);
-
-var filters = [
-    /http:\/\/image.cache.xiu8.com.+/,
-    /http:\/\/ubmcmm.baidustatic.com.+/
-]
-
-
-chrome.webRequest.onBeforeRequest.addListener(
-  function (details) {
-      var cancel = false,
-          url = details.url;
-
-      for (var i = 0; i < filters.length; i++) {
-          if (filters[i].test(url)) {
-              cancel = true;
-              break;
-          }
-      }
-      //if (cancel)
-      //    console.log(url, cancel);
-      //console.log("webRequest", arguments);/http:\/\/image.cache.xiu8.com.+/.test(details.url)
-      return { cancel: cancel };
-  },
-  {
-      urls: ["<all_urls>"]
-  },
-  ["blocking"]
-);
-
-
+}())
