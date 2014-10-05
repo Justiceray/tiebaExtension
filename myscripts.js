@@ -20,6 +20,11 @@ function init(document) {
        "#j_ten_years",
        ".dasense",
        "#aside_ad",
+	   "#j_ten_years",
+	   ".clearfix BAIDU_CLB_AD BAIDU_CLB_AD_pb",
+	   ".l_post_bright dasense dasense_0101 clearfix",
+	   "clearfix dasense dasense_0001",
+	   ".clearfix BAIDU_CLB_AD BAIDU_CLB_AD_frs"
     ],
         
     SELECTOR_GROUP_SIZE = 5;
