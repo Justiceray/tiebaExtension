@@ -24,7 +24,10 @@ function init(document) {
 	   ".clearfix BAIDU_CLB_AD BAIDU_CLB_AD_pb",
 	   ".l_post_bright dasense dasense_0101 clearfix",
 	   "clearfix dasense dasense_0001",
-	   ".clearfix BAIDU_CLB_AD BAIDU_CLB_AD_frs"
+	   ".clearfix BAIDU_CLB_AD BAIDU_CLB_AD_frs",
+	   "bdyx_tips_title_",
+	   "tenYearsWrap",
+	   "firework_sender_wrap"
     ],
         
     SELECTOR_GROUP_SIZE = 5;
